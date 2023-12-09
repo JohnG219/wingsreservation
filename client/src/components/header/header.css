@@ -1,0 +1,157 @@
+
+.header{
+    background-color: #443355;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    position:relative;
+}
+
+.headerContainer{
+    width: 100%;
+    max-width: 1024px;
+    margin: 20px 0px 75px 0px;   
+}
+
+.headerContainer.listMode{
+    margin: 20px 0px 0px 0px;
+}
+
+.headerList{
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.headerListItem{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+
+.headerListItem.active{
+    padding: 10px;
+}
+
+.headerDesc{
+    margin: 20px 0px;
+}
+
+.headerBtn{
+    background: #0071c2;
+    color: white;
+    font-weight: 500;
+    border-radius: 5px;
+    border:none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.headerBtn:hover {background-color: #0071c2}
+.headerBtn:active {
+  background-color: #0071c28c;
+  list-style: none;
+  transform: translateY(4px);
+}
+
+.headerSearch{
+    height: 50px;
+    background-color: white;
+    border: 3px solid #febb02;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0px;
+    border-radius: 5px;
+    position:absolute;
+    bottom: -25px;
+    width: 100%;
+    max-width: 1024px;
+}
+
+.headerIcon{
+    color: #443355;
+}
+
+.headerSearchItem{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+
+.headerSearchInput{
+    border:none;
+    outline: none;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.featuredImg1 {
+    width: 6%;
+    height: 6%;
+    object-fit: cover;
+}
+.featuredImg2 {
+    width: 87px;
+    height: 8%;
+    object-fit: cover;
+}
+.featuredImg3 {
+    width: 67px;
+    height: 6%;
+    object-fit: cover;
+}
+
+.headerSearchText{
+    color: #443355;
+    cursor: pointer;
+}
+
+.date{
+    position: absolute;
+    top: 50px;
+    z-index: 2;
+}
+
+.options{
+    z-index: 2;
+    position:absolute;
+    top: 50px;
+    background-color: white;
+    color: grey;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.4);
+}
+
+.optionItem{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin:10px;
+}
+
+.optionCounter{
+    display:flex;
+    align-items: center;
+    gap:10px;
+    font-size: 12px;
+    color: black;
+}
+
+.optionCounterNumber{
+    color:black;
+}
+.optionCounterButton{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #0071c2;
+    color: #0071c2;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.optionCounterButton:disabled{
+    cursor:not-allowed;
+}
