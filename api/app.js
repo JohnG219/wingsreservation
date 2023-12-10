@@ -28,7 +28,10 @@ mongoose.connection.on("disconnected", () => {
 });
 
 //middlewares
-app.use(cors());
+app.use(cors({
+  origin: "https://frontend-reservationappmern.onrender.com",
+  credentials: true,
+}));
 app.use(cookieParser());
 app.use(express.json());
 
