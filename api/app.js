@@ -14,6 +14,8 @@ import transactionRoute from "./routes/transaction.js";
 const app = express();
 dotenv.config();
 
+const buildPath = path.join(__dirname, 'build')
+
 const connect = async () => {
   try {
     await mongoose.connect(process.env.MONGO);
@@ -28,6 +30,7 @@ mongoose.connection.on("disconnected", () => {
 });
 
 //middlewares
+app.use(express.static(buildPath))
 app.use(cors({
   origin: "https://frontend-reservationappmern.onrender.com",
   credentials: true,
@@ -54,13 +57,15 @@ app.use((err, req, res, next) => {
   });
 });
 
+app.get('*', (req, res) => {
+  res.sendFile(path.join(buildPath, 'index.html'))
+})
 /*
 app.get("/users", (req,res) => {
     res.send("hello baby love you!")
 })
 */
 
-app.listen(8800, () => {
-  connect();
-  console.log("Connected to backend.");
-});
+app.listen(port, () => {
+  console.log(`Server is online on port: ${port}`)
+})
