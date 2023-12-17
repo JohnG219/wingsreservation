@@ -1,3 +1,5 @@
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
@@ -11,6 +13,9 @@ import cors from "cors";
 import customersRoute from "./routes/customers.js";
 import contactRoute from "./routes/contact.js";
 import transactionRoute from "./routes/transaction.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const app = express();
 dotenv.config();
@@ -62,7 +67,9 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(8800, () => {
+// Start the server
+const PORT = process.env.PORT || 8800;
+app.listen(PORT, () => {
   connect();
-  console.log("Connected to backend.");
+  console.log(`Connected to backend. Server is running on port ${PORT}`);
 });
