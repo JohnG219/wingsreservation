@@ -1,5 +1,3 @@
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
@@ -8,14 +6,10 @@ import usersRoute from "./routes/users.js";
 import hotelsRoute from "./routes/hotels.js";
 import roomsRoute from "./routes/rooms.js";
 import cookieParser from "cookie-parser";
-import path from "path"; 
 import cors from "cors";
 import customersRoute from "./routes/customers.js";
 import contactRoute from "./routes/contact.js";
 import transactionRoute from "./routes/transaction.js";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 const app = express();
 dotenv.config();
@@ -49,27 +43,24 @@ app.use("/api/customers", customersRoute);
 app.use("/api/contact", contactRoute);
 app.use("/api/transaction", transactionRoute);
 
-app.use(express.static(path.join(__dirname, 'build')));
-
-// Catch-all route for client-side routing
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
   const errorMessage = err.message || "Something went wrong";
   return res.status(errorStatus).json({
-    success: false,
+    sucess: false,
     status: errorStatus,
     message: errorMessage,
     stack: err.stack,
   });
 });
 
-// Start the server
-const PORT = process.env.PORT || 8800;
-app.listen(PORT, () => {
+/*
+app.get("/users", (req,res) => {
+    res.send("hello baby love you!")
+})
+*/
+
+app.listen(8800, () => {
   connect();
-  console.log(`Connected to backend. Server is running on port ${PORT}`);
+  console.log("Connected to backend.");
 });
