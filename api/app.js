@@ -6,6 +6,7 @@ import usersRoute from "./routes/users.js";
 import hotelsRoute from "./routes/hotels.js";
 import roomsRoute from "./routes/rooms.js";
 import cookieParser from "cookie-parser";
+import path from "path"; 
 import cors from "cors";
 import customersRoute from "./routes/customers.js";
 import contactRoute from "./routes/contact.js";
@@ -43,22 +44,23 @@ app.use("/api/customers", customersRoute);
 app.use("/api/contact", contactRoute);
 app.use("/api/transaction", transactionRoute);
 
+app.use(express.static(path.join(__dirname, 'https://frontend-reservationappmern.onrender.com')));
+
+// Catch-all route for client-side routing
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'https://frontend-reservationappmern.onrender.com', 'index.html'));
+});
+
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
   const errorMessage = err.message || "Something went wrong";
   return res.status(errorStatus).json({
-    sucess: false,
+    success: false,
     status: errorStatus,
     message: errorMessage,
     stack: err.stack,
   });
 });
-
-/*
-app.get("/users", (req,res) => {
-    res.send("hello baby love you!")
-})
-*/
 
 app.listen(8800, () => {
   connect();
