@@ -44,11 +44,11 @@ app.use("/api/customers", customersRoute);
 app.use("/api/contact", contactRoute);
 app.use("/api/transaction", transactionRoute);
 
-app.use(express.static(path.join(__dirname, 'https://frontend-reservationappmern.onrender.com')));
+app.use(express.static(path.join(__dirname, 'build')));
 
 // Catch-all route for client-side routing
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'https://frontend-reservationappmern.onrender.com', 'index.html'));
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 app.use((err, req, res, next) => {
