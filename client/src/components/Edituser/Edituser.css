@@ -1,0 +1,146 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body .login2 {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("https://images.pexels.com/photos/376533/pexels-photo-376533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    height: 100vh;
+    display: flex;
+}
+
+body .lContainer13 {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    background-repeat: no-repeat;
+    border-style: none;
+    border-radius: 12px;
+    height: 78%;
+    margin-bottom: 50px;
+    margin-top: 5%;
+    margin-left: 24%;
+    background-color: #FFFFFF;
+}
+
+.lInput7 {
+    margin-top: 20px;
+    height: 37px;
+    padding: 10px;
+    width: 300px;
+    font-size: 17px;
+    margin-left: 20px;
+    margin-top: 30px;
+    border-color: black;
+    border-width: 1px;
+}
+
+.lButton99 {
+    border: none;
+    padding: 10px 20px;
+    background-color: #0071c2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.lButton99:disabled{
+    background-color: #0071c28c;
+    cursor: not-allowed;
+}
+.lButton99:active {
+  background-color: #0071c28c;
+  list-style: none;
+    transform: translateY(4px);
+  }
+
+
+.sp22 {
+    font-size: 25px;
+    color: #443355;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 90px;
+}
+
+.logol3 {
+    height: 100px;
+    width: 100px;
+}
+
+#oldpass {
+    color: red;
+    text-align: center;
+    font-size: 13px;
+}
+
+.newring {
+    height: auto;
+    margin-top: 30px;
+    text-align: auto;
+    position: relative;
+}
+.newring>loading {
+    position: relative;
+    text-align: center; 
+}
+
+.lButton300 {
+    color: black;
+    font-size: 20px;
+    border-style: none;
+    margin-left: 15px;
+    text-decoration: underline;
+    text-decoration-color: #0071c2;
+}
+
+.lButton300:hover {
+    border-style: none;
+    background-color: #0071c2;
+    text-decoration: none;
+    color: #fff;
+}
+
+.lContainer13 img{
+    margin-top: 10px;
+    height: 100px;
+    width: 100px;
+    margin-right: 440px;
+    border-radius: 50px;
+    margin-left: 50px;
+}
+
+#iconsss {
+    cursor: pointer;
+    padding-bottom: 15px;
+    font-size: 14px;
+    color: black;
+    margin-left: 35px;
+ }
+
+ #profi {
+    color: red;
+    font-size: 12px;
+    margin-left: 18px;
+ }
+
+ .error {
+    border: 1px solid red;
+  }
+  .errorMessage {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    position: fixed;
+    margin-left: 20px;
+  }

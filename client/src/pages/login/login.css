@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body.logBody{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("https://images.pexels.com/photos/956981/milky-way-starry-sky-night-sky-star-956981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .login {
+    max-width: 1000px;
+    background:white;
+    padding: 25px 30px;
+    border-radius: 6px;
+    border-style: none;
+    padding: 80px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: whitesmoke;
+    background-image: url("logo.png");
+    background-size: 100px;
+    background-repeat: no-repeat;
+    flex-wrap: wrap;
+  }
+  
+  .lContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-image: url("userlog.png");
+    background-repeat: no-repeat;
+    background-size: 80px;
+    background-position: top;
+    background-position-y: -8%;
+    padding-top: 50px;
+  }
+  
+  .lInput{
+    margin-top: 9px;
+    width: 100%;
+    height: 43px;
+    
+  }
+  
+  .titleLog{
+    color:black;
+    justify-content: center;
+    position: relative;
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .titleLog::before{
+    content: '';
+    position: absolute;
+    margin-left: 36px;
+    left:0;
+    bottom:0;
+    height: 3px;
+    width: 105px;
+    background:linear-gradient(130deg, #003580, #00c6ff);
+  }
+  
+  .lButton {
+    border: none;
+    padding: 10px 20px;
+    background-color: #0071c2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .lButton:disabled{
+    background-color: #0071c28c;
+    cursor: not-allowed;
+  }
+  
+  .colorspan
+  {
+   font-size: 18px;
+   color:#ff3333;
+   height: 0;
+  }
+  
+  .shr123 {
+    text-align: center;
+    font-size: 12px;
+    height: fit-content;
+  }
+  
+  .sh1:hover {
+    text-decoration: underline;
+    color: green;
+  }
+  
+  .sh2:hover {
+    text-decoration: underline;
+    color: red;
+  }
+
+  .error {
+    border-color: red;
+  }
+
+
+  /* Existing CSS styles */
+
+/* Add the following media query for mobile view */
+@media (max-width: 768px) {
+  body.logBody {
+    padding: 0; 
+  }
+
+  .login {
+    max-width: 100%;
+    padding: 25px;
+    height: fit-content; 
+  }
+
+  .lInput {
+    height: 40px; 
+  }
+
+  .titleLog {
+    font-size: 24px;
+  }
+
+  .lButton {
+    padding: 10px 15px; 
+  }
+
+  .colorspan {
+    font-size: 16px; 
+    margin-top: 48%;
+  }
+
+  .lContainer {
+    padding-top: 30px; 
+    background-size: 50px; 
+    background-position-y: -5%;
+  }
+}

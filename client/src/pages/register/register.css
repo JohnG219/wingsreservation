@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Anek+Odia:wght@100;300&family=Beau+Rivage&family=Bebas+Neue&family=Charis+SIL&family=Exo:wght@200;300;400;700;800&family=Lobster&family=Maven+Pro&family=Montserrat:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;0,900;1,200&family=Noto+Serif:wght@700&family=Open+Sans:wght@300&family=Poppins:wght@200&family=Raleway&family=Rubik:ital,wght@1,300&family=Shadows+Into+Light&family=Source+Serif+Pro:ital@1&family=Water+Brush&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body.regBody{
+    
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-image: url("https://images.pexels.com/photos/376533/pexels-photo-376533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.reTitle{
+    color: green;
+    justify-content: center;
+    position: relative;
+    font-family: "Bebas Neue";
+    font-size: 60px;
+}
+
+.reTitle::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom:0;
+    height: 3px;
+    width: 160px;
+    background:linear-gradient(130deg, #003580, #00c6ff);
+}
+
+.registerr123{
+    max-width: 1000px;
+    background:white;
+    padding: 25px 30px;
+    border-radius: 5px;
+    height: 600px;
+}
+
+.rInput{
+    margin-top: 20px;
+    width: 40%;
+    height: 40px;
+    margin-left: 63px;
+}
+
+.rInput1{
+    font-size: 16px;
+    width: 13%;
+    margin-top: 20px;
+    height: 40px;
+    margin-left: 63px;
+    cursor: pointer;
+}
+
+.rInput2{
+    font-size: 17px;
+    margin-left: 37px;
+    cursor: pointer;
+}
+
+.btn{
+    border: none;
+    background-color: #0071c2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 76px;
+    height: 36px;
+    margin-top: 2px;
+    font-size: 14px;
+}  
+.btn:hover {
+background-color: #0071c2
+}
+.btn:active {
+background-color: #0071c28c;
+list-style: none;
+transform: translateY(4px);
+}
+
+.submit-success, .submit-error {
+    display: none;
+}
+
+.left1 img{
+    margin-top: 10px;
+    height: 100px;
+    width: 100px;
+    margin-right: 440px;
+    border-radius: 50px;
+}
+
+#iconss {
+   cursor: pointer;
+   padding-bottom: 15px;
+   font-size: 14px;
+}
+
+.left1 {
+    background-color: white;
+}
+
+.error {
+    border-color: red;
+    background-color: red;
+  }
+  
+.close-button1 {
+    margin-left: 98%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -14px;
+    margin-bottom: -9px;
+}
+  
